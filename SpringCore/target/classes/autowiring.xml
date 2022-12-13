@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+	http://www.springframework.org/schema/context
+	http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+<bean id = "marks" class="com.java.autowiring.Marks">
+    <property name="marks" value="78"></property>
+</bean>
+    <bean id="employee" class="com.java.autowiring.Employee" autowire="byType"></bean>
+    <bean id="student" class="com.java.autowiring.Student" autowire="byName">
+        <property name="id" value="10"></property>
+        <property name="name" value="hari"></property>
+    </bean>
+
+
+</beans>
