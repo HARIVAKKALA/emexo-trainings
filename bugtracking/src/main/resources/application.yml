@@ -1,0 +1,19 @@
+spring:
+  datasource:
+    driverClassName: oracle.jdbc.OracleDriver
+    url: jdbc:oracle:thin:@localhost:1521:xe
+    username: root
+    password: 123456789
+server:
+  port: 9091
+
+#Actuator
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: info,health,metrics,loggers,beans,mappings,threaddump,env
+  endpoint:
+    health:
+      show-details: always
